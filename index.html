@@ -118,6 +118,12 @@ footer{padding:36px 0;text-align:center;color:var(--muted);border-top:1px solid 
 
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
 .reveal.on{opacity:1;transform:none}
+
+.ccard{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:640px;margin:26px auto 0}
+.crow{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-weight:600;font-size:.95rem;color:var(--text);transition:transform .2s,border-color .2s}
+.crow:hover{transform:translateY(-3px);border-color:var(--a1)}
+.crow .cic{width:34px;height:34px;flex:0 0 34px;border-radius:9px;background:linear-gradient(120deg,var(--a1),var(--a2));display:grid;place-items:center;font-size:.9rem;font-weight:700;color:#fff}
+@media(max-width:560px){.ccard{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -235,11 +241,7 @@ footer{padding:36px 0;text-align:center;color:var(--muted);border-top:1px solid 
   <div class="eyebrow">Let's talk</div>
   <h2>Building something with data or AI?</h2>
   <p>I'm open to Data Engineer, Analytics Engineer, and AI/ML roles. I'd love to hear what you're working on.</p>
-  <div class="cta" style="justify-content:center">
-    <a href="mailto:srivignabandela0507@gmail.com" class="btn btn-primary">Email me</a>
-    <a href="https://www.linkedin.com/in/srivigna-reddy-bandela-379b51229/" target="_blank" class="btn btn-ghost">LinkedIn &#8599;</a>
-    <a href="https://github.com/Bandelasrivigna" target="_blank" class="btn btn-ghost">GitHub &#8599;</a>
-  </div>
+  <div class="ccard"><a class="crow" href="mailto:srivignabandela0507@gmail.com"><span class="cic">&#9993;</span>srivignabandela0507@gmail.com</a><a class="crow" href="tel:+13123711902"><span class="cic">&#9742;</span>+1 312-371-1902</a><a class="crow" href="https://www.linkedin.com/in/srivigna-reddy-bandela-379b51229/" target="_blank" rel="noopener noreferrer"><span class="cic">in</span>LinkedIn</a><a class="crow" href="https://github.com/Bandelasrivigna" target="_blank" rel="noopener noreferrer"><span class="cic">&#9670;</span>GitHub</a></div>
 </div></section>
 
 <footer><div class="wrap">© 2026 Srivigna Reddy Bandela · Built from scratch with a lot of coffee ☕</div></footer>
