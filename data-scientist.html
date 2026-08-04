@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Srivigna Reddy Bandela — Data Scientist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080a0f; --bg2:#0d1017; --card:rgba(255,255,255,.04); --line:rgba(255,255,255,.08);
+  --text:#eef1f6; --muted:#9aa6b8; --a1:#5b8cff; --a2:#a06bff; --a3:#31d6c7;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,.brand{font-family:'Sora',sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+.grad{background:linear-gradient(120deg,var(--a1),var(--a2) 45%,var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.aurora{position:fixed;inset:0;z-index:-2;overflow:hidden}
+.aurora span{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;animation:float 18s ease-in-out infinite}
+.aurora span:nth-child(1){width:480px;height:480px;background:#3a5bff;top:-140px;left:-120px}
+.aurora span:nth-child(2){width:420px;height:420px;background:#8a3bff;bottom:-160px;right:-100px;animation-delay:-6s}
+.aurora span:nth-child(3){width:360px;height:360px;background:#17b3a6;top:40%;left:55%;animation-delay:-12s}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-40px)}}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% 0,rgba(91,140,255,.08),transparent 60%)}
+
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(8,10,15,.6);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:1.1rem;letter-spacing:.3px}
+.brand .dot{color:var(--a1)}
+.navlinks{display:flex;gap:26px;align-items:center}
+.navlinks a{color:var(--muted);font-size:.92rem;font-weight:500;transition:color .2s}
+.navlinks a:hover{color:var(--text)}
+.btn{display:inline-block;padding:10px 20px;border-radius:30px;font-weight:600;font-size:.9rem;transition:transform .2s,box-shadow .2s}
+.btn-primary{background:linear-gradient(120deg,var(--a1),var(--a2));color:#fff;box-shadow:0 8px 24px rgba(91,140,255,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(91,140,255,.5)}
+.btn-ghost{border:1px solid var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--a1);transform:translateY(-2px)}
+@media(max-width:720px){.navlinks a:not(.btn){display:none}}
+
+header{padding:96px 0 60px;text-align:center}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border:1px solid var(--line);border-radius:30px;background:var(--card);color:var(--muted);font-size:.82rem;margin-bottom:26px}
+.pill .live{width:8px;height:8px;border-radius:50%;background:var(--a3);box-shadow:0 0 10px var(--a3);animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+header h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;line-height:1.05;letter-spacing:-1px}
+.rolewrap{font-size:clamp(1.2rem,3.4vw,2rem);font-weight:700;margin-top:10px;height:2.4rem}
+#role{border-right:2px solid var(--a2);padding-right:4px}
+header p.lead{max-width:620px;margin:22px auto 0;color:var(--muted);font-size:1.08rem}
+.cta{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:56px 0 20px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 16px;text-align:center;backdrop-filter:blur(6px)}
+.stat .num{font-family:'Sora';font-size:2rem;font-weight:800}
+.stat .lbl{color:var(--muted);font-size:.84rem;margin-top:4px}
+@media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+section{padding:64px 0;border-top:1px solid var(--line)}
+.eyebrow{color:var(--a1);font-weight:600;font-size:.85rem;letter-spacing:2px;text-transform:uppercase}
+section h2{font-size:2rem;font-weight:800;margin:8px 0 26px;letter-spacing:-.5px}
+.about p{color:var(--muted);font-size:1.06rem;max-width:760px}
+
+.projects{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pcard{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;overflow:hidden;transition:transform .25s,border-color .25s;backdrop-filter:blur(6px)}
+.pcard::after{content:"";position:absolute;inset:0;border-radius:18px;padding:1px;background:linear-gradient(120deg,var(--a1),var(--a2),var(--a3));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .25s}
+.pcard:hover{transform:translateY(-6px)}
+.pcard:hover::after{opacity:1}
+.pcard .ptag{color:var(--a3);font-size:.78rem;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.pcard h3{font-size:1.25rem;margin:6px 0 8px}
+.pcard p{color:var(--muted);font-size:.94rem}
+.stackrow{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 16px}
+.stackrow span{font-size:.76rem;background:rgba(91,140,255,.12);color:#bcd0ff;padding:4px 10px;border-radius:12px}
+.plink{color:var(--a1);font-weight:600;font-size:.88rem;display:inline-flex;align-items:center;gap:5px}
+.plink:hover{gap:9px;transition:gap .2s}
+@media(max-width:720px){.projects{grid-template-columns:1fr}}
+
+.skillgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.skillcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.skillcard h4{font-family:'Sora';font-size:1rem;margin-bottom:12px;color:#fff}
+.skillcard h4 i{color:var(--a1);margin-right:8px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:.82rem;border:1px solid var(--line);padding:6px 12px;border-radius:14px;color:var(--text);transition:.2s}
+.tags span:hover{border-color:var(--a2);color:#fff;transform:translateY(-2px)}
+@media(max-width:720px){.skillgrid{grid-template-columns:1fr}}
+
+.tl{position:relative;padding-left:26px}
+.tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--a1),var(--a2))}
+.tl .item{position:relative;margin-bottom:26px}
+.tl .item::before{content:"";position:absolute;left:-24px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--a1);box-shadow:0 0 0 4px rgba(91,140,255,.2)}
+.tl .top{display:flex;justify-content:space-between;flex-wrap:wrap}
+.tl h3{font-size:1.1rem}
+.tl .date{color:var(--muted);font-size:.85rem}
+.tl ul{margin:8px 0 0 18px;color:var(--muted);font-size:.93rem}
+.tl li{margin-bottom:4px}
+
+.certs{display:flex;flex-wrap:wrap;gap:12px}
+.cert{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-weight:600;font-size:.92rem}
+.cert .ic{width:34px;height:34px;border-radius:9px;background:linear-gradient(120deg,var(--a1),var(--a2));display:grid;place-items:center;font-size:.9rem}
+
+.contact{text-align:center}
+.contact h2{font-size:clamp(1.8rem,4vw,2.6rem)}
+.contact p{color:var(--muted);max-width:520px;margin:12px auto 26px}
+
+footer{padding:36px 0;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:.88rem}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.on{opacity:1;transform:none}
+
+.ccard{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:640px;margin:26px auto 0}
+.crow{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-weight:600;font-size:.95rem;color:var(--text);transition:transform .2s,border-color .2s}
+.crow:hover{transform:translateY(-3px);border-color:var(--a1)}
+.crow .cic{width:34px;height:34px;flex:0 0 34px;border-radius:9px;background:linear-gradient(120deg,var(--a1),var(--a2));display:grid;place-items:center;font-size:.9rem;font-weight:700;color:#fff}
+@media(max-width:560px){.ccard{grid-template-columns:1fr}}
+</style></head><body>
+<div class="aurora"><span></span><span></span><span></span></div>
+<nav><div class="wrap"><div class="brand">SRB<span class="dot">.</span></div>
+<div class="navlinks"><a href="./index.html">Home</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="mailto:srivignabandela0507@gmail.com" class="btn btn-primary">Contact</a></div></div></nav>
+<header><div class="wrap">
+<div class="pill"><span class="live"></span> Open to Data Scientist roles</div>
+<h1>Srivigna Reddy <span class="grad">Bandela</span></h1>
+<div class="rolewrap"><span id="role" class="grad"></span></div>
+<p class="lead">I use statistics and machine learning to answer real questions — designing experiments, quantifying impact, and turning messy data into decisions people act on.</p>
+<div class="cta"><a href="#projects" class="btn btn-primary">View my work</a>
+<a href="https://github.com/Bandelasrivigna" target="_blank" class="btn btn-ghost">GitHub &#8599;</a>
+<a href="https://www.linkedin.com/in/srivigna-reddy-bandela-379b51229/" target="_blank" class="btn btn-ghost">LinkedIn &#8599;</a></div>
+<div class="stats reveal"><div class="stat"><div class="num grad" data-to="3" data-suffix="+">0</div><div class="lbl">Years experience</div></div><div class="stat"><div class="num grad" data-to="90" data-suffix="%+">0</div><div class="lbl">Model accuracy</div></div><div class="stat"><div class="num grad" data-to="6" data-suffix="+">0</div><div class="lbl">ML projects shipped</div></div><div class="stat"><div class="num grad" data-to="3" data-suffix="">0</div><div class="lbl">Certifications</div></div></div></div></header>
+<section class="about reveal"><div class="wrap"><div class="eyebrow">About</div><h2>Statistics and ML in service of decisions</h2><p>Data Scientist with 3 years applying advanced statistical methods and machine learning to research and business questions. Strong in Python, SQL, and R, with hands-on experience in experiment and study design, exploratory data analysis, forecasting, model validation, and communicating complex findings to non-technical audiences. I care most about the last mile — turning an analysis into a decision someone can trust. MS in Computer Science (GPA 3.90).</p></div></section>
+<section id="projects" class="reveal"><div class="wrap"><div class="eyebrow">Selected Work</div><h2>Projects</h2><div class="projects"><div class="pcard"><div class="ptag">Health ML · Time-Series</div><h3>VitalTrack</h3><p>ML on health and wearable sensor time-series (heart-rate, accelerometer) for activity recognition and anomaly detection — feature engineering, deep learning, and evaluation with drift monitoring.</p><div class="stackrow"><span>PyTorch</span><span>LSTM</span><span>Time-Series</span><span>Anomaly Detection</span></div><a class="plink" href="https://github.com/Bandelasrivigna" target="_blank">GitHub &#8599;</a></div><div class="pcard"><div class="ptag">Statistical Forecasting</div><h3>ForecastIQ</h3><p>Forecasting and statistical models on seasonal, intermittent time-series — backtesting, feature engineering, and quantified accuracy to prioritize decisions and estimate impact.</p><div class="stackrow"><span>Python</span><span>scikit-learn</span><span>statsmodels</span><span>Forecasting</span></div><a class="plink" href="https://github.com/Bandelasrivigna" target="_blank">GitHub &#8599;</a></div><div class="pcard"><div class="ptag">Experimentation</div><h3>GrowthLab</h3><p>A/B testing and product-analytics workbench: designs experiments, measures lift with statistical rigor (significance, confidence intervals), and turns results into clear recommendations.</p><div class="stackrow"><span>SQL</span><span>Python</span><span>A/B Testing</span><span>Causal Inference</span></div><a class="plink" href="https://github.com/Bandelasrivigna" target="_blank">GitHub &#8599;</a></div><div class="pcard"><div class="ptag">AI · LLM · RAG</div><h3>IntelliQuery</h3><p>Natural-language-to-SQL assistant that lets non-technical users self-serve reliable answers — LLMs, RAG over a semantic layer, and guardrails that keep the SQL grounded.</p><div class="stackrow"><span>LLM</span><span>RAG</span><span>SQL</span><span>Prompt Engineering</span></div><a class="plink" href="https://github.com/Bandelasrivigna/IntelliQuery" target="_blank">View code &#8599;</a></div></div></div></section>
+<section id="skills" class="reveal"><div class="wrap"><div class="eyebrow">Toolbox</div><h2>Skills</h2><div class="skillgrid"><div class="skillcard"><h4><i>&#9670;</i>Statistics &amp; Experimentation</h4><div class="tags"><span>Hypothesis Testing</span><span>A/B Testing</span><span>Study &amp; Experiment Design</span><span>Causal Inference</span><span>ROI &amp; Program Evaluation</span><span>Confidence Intervals</span></div></div><div class="skillcard"><h4><i>&#9670;</i>Machine Learning</h4><div class="tags"><span>scikit-learn</span><span>XGBoost</span><span>PyTorch</span><span>Forecasting</span><span>Feature Engineering</span><span>Model Evaluation</span></div></div><div class="skillcard"><h4><i>&#9670;</i>Programming</h4><div class="tags"><span>Python (Pandas, NumPy, statsmodels)</span><span>SQL (Advanced)</span><span>R</span><span>Git / GitHub</span></div></div><div class="skillcard"><h4><i>&#9670;</i>Data, Cloud &amp; Viz</h4><div class="tags"><span>BigQuery</span><span>GCP</span><span>Databricks</span><span>Tableau</span><span>Power BI</span><span>MLOps</span></div></div></div></div></section>
+<section id="experience" class="reveal"><div class="wrap"><div class="eyebrow">Journey</div><h2>Experience</h2><div class="tl"><div class="item"><div class="top"><h3>Data Scientist — HCL Technologies</h3><span class="date">Aug 2022 – Jul 2024</span></div><ul><li>Built and validated predictive/classification models to 90%+ accuracy with feature engineering and cross-validation.</li><li>Designed and analyzed experiments and statistical analysis plans, quantifying lift, significance, and ROI.</li><li>Ran EDA on large structured and unstructured datasets; presented findings to non-technical audiences.</li></ul></div><div class="item"><div class="top"><h3>Associate Software Engineer — ApheX (Startup)</h3><span class="date">Jul 2021 – Apr 2022</span></div><ul><li>Built data and ML pipelines from scratch, owning cleaning, feature engineering, and analysis.</li><li>Automated recurring reporting to speed up data-informed decisions.</li></ul></div><div class="item"><div class="top"><h3>M.S. Computer Science — Governors State University</h3><span class="date">Aug 2024 – May 2026</span></div><ul><li>GPA 3.90 · Machine Learning, Statistics, Data Mining, Database Systems.</li></ul></div></div></div></section>
+<section class="reveal"><div class="wrap"><div class="eyebrow">Credentials</div><h2>Certifications</h2><div class="certs"><div class="cert"><div class="ic">&#9729;</div>AWS Certified Machine Learning – Associate</div><div class="cert"><div class="ic">&#9729;</div>Google Professional Data Engineer</div><div class="cert"><div class="ic">&#9729;</div>AWS Certified Data Engineer – Associate</div></div></div></section>
+<section class="contact reveal"><div class="wrap"><div class="eyebrow">Let's talk</div><h2>Have a question in your data?</h2>
+<p>Open to new roles and always happy to talk shop. Let's connect.</p>
+<div class="ccard"><a class="crow" href="mailto:srivignabandela0507@gmail.com"><span class="cic">&#9993;</span>srivignabandela0507@gmail.com</a><a class="crow" href="tel:+13123711902"><span class="cic">&#9742;</span>+1 312-371-1902</a><a class="crow" href="https://www.linkedin.com/in/srivigna-reddy-bandela-379b51229/" target="_blank" rel="noopener noreferrer"><span class="cic">in</span>LinkedIn</a><a class="crow" href="https://github.com/Bandelasrivigna" target="_blank" rel="noopener noreferrer"><span class="cic">&#9670;</span>GitHub</a></div></div></section>
+<footer><div class="wrap">© 2026 Srivigna Reddy Bandela · <a href="./index.html" style="color:var(--a1)">Back to home</a></div></footer>
+<script>
+const roles=["Data Scientist","ML Practitioner","Applied Statistician","Insights Partner"];let ri=0,ci=0,del=false;const el=document.getElementById('role');
+(function type(){const w=roles[ri];el.textContent=w.slice(0,ci);
+if(!del&&ci<w.length){ci++;setTimeout(type,90);}else if(!del&&ci===w.length){del=true;setTimeout(type,1400);}
+else if(del&&ci>0){ci--;setTimeout(type,45);}else{del=false;ri=(ri+1)%roles.length;setTimeout(type,300);}})();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+function countUp(n){const to=+n.dataset.to,s=n.dataset.suffix||"";let v=0,st=to/40;const t=setInterval(()=>{v+=st;if(v>=to){v=to;clearInterval(t);}n.textContent=Math.round(v)+s;},22);}
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.num').forEach(countUp);so.unobserve(e.target);}}),{threshold:.4});
+document.querySelectorAll('.stats').forEach(x=>so.observe(x));
+</script></body></html>
