@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Srivigna Reddy Bandela — Software Engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Vigna B — Software Engineer</title>
+<meta name="description" content="Software Engineer — Python backend, REST APIs, and reliable systems built to last.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#080a0f; --bg2:#0d1017; --card:rgba(255,255,255,.04); --line:rgba(255,255,255,.08);
-  --text:#eef1f6; --muted:#9aa6b8; --a1:#5b8cff; --a2:#a06bff; --a3:#31d6c7;
+  --bg:#0f0900; --bg2:#180f00; --card:rgba(255,255,255,.04); --line:rgba(255,255,255,.08);
+  --text:#eef1f6; --muted:#9aa6b8; --a1:#f97316; --a2:#f59e0b; --a3:#22c55e;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -16,18 +20,14 @@ h1,h2,h3,.brand{font-family:'Sora',sans-serif}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
 .grad{background:linear-gradient(120deg,var(--a1),var(--a2) 45%,var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent}
-
-/* aurora background */
 .aurora{position:fixed;inset:0;z-index:-2;overflow:hidden}
-.aurora span{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;animation:float 18s ease-in-out infinite}
-.aurora span:nth-child(1){width:480px;height:480px;background:#3a5bff;top:-140px;left:-120px}
-.aurora span:nth-child(2){width:420px;height:420px;background:#8a3bff;bottom:-160px;right:-100px;animation-delay:-6s}
-.aurora span:nth-child(3){width:360px;height:360px;background:#17b3a6;top:40%;left:55%;animation-delay:-12s}
+.aurora span{position:absolute;border-radius:50%;filter:blur(90px);opacity:.4;animation:float 18s ease-in-out infinite}
+.aurora span:nth-child(1){width:500px;height:500px;background:#c2410c;top:-160px;left:-130px}
+.aurora span:nth-child(2){width:420px;height:420px;background:#b45309;bottom:-160px;right:-100px;animation-delay:-6s}
+.aurora span:nth-child(3){width:360px;height:360px;background:#15803d;top:40%;left:55%;animation-delay:-12s}
 @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-40px)}}
-body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% 0,rgba(91,140,255,.08),transparent 60%)}
-
-/* nav */
-nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(8,10,15,.6);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% 0,rgba(249,115,22,.07),transparent 60%)}
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(15,9,0,.6);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{font-weight:800;font-size:1.1rem;letter-spacing:.3px}
 .brand .dot{color:var(--a1)}
@@ -35,13 +35,11 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .navlinks a{color:var(--muted);font-size:.92rem;font-weight:500;transition:color .2s}
 .navlinks a:hover{color:var(--text)}
 .btn{display:inline-block;padding:10px 20px;border-radius:30px;font-weight:600;font-size:.9rem;transition:transform .2s,box-shadow .2s}
-.btn-primary{background:linear-gradient(120deg,var(--a1),var(--a2));color:#fff;box-shadow:0 8px 24px rgba(91,140,255,.35)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(91,140,255,.5)}
+.btn-primary{background:linear-gradient(120deg,var(--a1),var(--a2));color:#fff;box-shadow:0 8px 24px rgba(249,115,22,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(249,115,22,.45)}
 .btn-ghost{border:1px solid var(--line);color:var(--text)}
 .btn-ghost:hover{border-color:var(--a1);transform:translateY(-2px)}
 @media(max-width:720px){.navlinks a:not(.btn){display:none}}
-
-/* hero */
 header{padding:96px 0 60px;text-align:center}
 .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border:1px solid var(--line);border-radius:30px;background:var(--card);color:var(--muted);font-size:.82rem;margin-bottom:26px}
 .pill .live{width:8px;height:8px;border-radius:50%;background:var(--a3);box-shadow:0 0 10px var(--a3);animation:pulse 1.6s infinite}
@@ -51,35 +49,27 @@ header h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;line-height:1.05;le
 #role{border-right:2px solid var(--a2);padding-right:4px}
 header p.lead{max-width:620px;margin:22px auto 0;color:var(--muted);font-size:1.08rem}
 .cta{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-
-/* stats */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:56px 0 20px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 16px;text-align:center;backdrop-filter:blur(6px)}
 .stat .num{font-family:'Sora';font-size:2rem;font-weight:800}
 .stat .lbl{color:var(--muted);font-size:.84rem;margin-top:4px}
 @media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
-
 section{padding:64px 0;border-top:1px solid var(--line)}
 .eyebrow{color:var(--a1);font-weight:600;font-size:.85rem;letter-spacing:2px;text-transform:uppercase}
 section h2{font-size:2rem;font-weight:800;margin:8px 0 26px;letter-spacing:-.5px}
 .about p{color:var(--muted);font-size:1.06rem;max-width:760px}
-
-/* projects */
 .projects{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .pcard{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;overflow:hidden;transition:transform .25s,border-color .25s;backdrop-filter:blur(6px)}
 .pcard::after{content:"";position:absolute;inset:0;border-radius:18px;padding:1px;background:linear-gradient(120deg,var(--a1),var(--a2),var(--a3));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .25s}
-.pcard:hover{transform:translateY(-6px)}
-.pcard:hover::after{opacity:1}
+.pcard:hover{transform:translateY(-6px)}.pcard:hover::after{opacity:1}
 .pcard .ptag{color:var(--a3);font-size:.78rem;font-weight:600;letter-spacing:1px;text-transform:uppercase}
 .pcard h3{font-size:1.25rem;margin:6px 0 8px}
 .pcard p{color:var(--muted);font-size:.94rem}
 .stackrow{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 16px}
-.stackrow span{font-size:.76rem;background:rgba(91,140,255,.12);color:#bcd0ff;padding:4px 10px;border-radius:12px}
+.stackrow span{font-size:.76rem;background:rgba(249,115,22,.1);color:#fed7aa;padding:4px 10px;border-radius:12px}
 .plink{color:var(--a1);font-weight:600;font-size:.88rem;display:inline-flex;align-items:center;gap:5px}
 .plink:hover{gap:9px;transition:gap .2s}
 @media(max-width:720px){.projects{grid-template-columns:1fr}}
-
-/* skills */
 .skillgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .skillcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
 .skillcard h4{font-family:'Sora';font-size:1rem;margin-bottom:12px;color:#fff}
@@ -88,73 +78,172 @@ section h2{font-size:2rem;font-weight:800;margin:8px 0 26px;letter-spacing:-.5px
 .tags span{font-size:.82rem;border:1px solid var(--line);padding:6px 12px;border-radius:14px;color:var(--text);transition:.2s}
 .tags span:hover{border-color:var(--a2);color:#fff;transform:translateY(-2px)}
 @media(max-width:720px){.skillgrid{grid-template-columns:1fr}}
-
-/* experience */
 .tl{position:relative;padding-left:26px}
 .tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--a1),var(--a2))}
 .tl .item{position:relative;margin-bottom:26px}
-.tl .item::before{content:"";position:absolute;left:-24px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--a1);box-shadow:0 0 0 4px rgba(91,140,255,.2)}
+.tl .item::before{content:"";position:absolute;left:-24px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--a1);box-shadow:0 0 0 4px rgba(249,115,22,.2)}
 .tl .top{display:flex;justify-content:space-between;flex-wrap:wrap}
 .tl h3{font-size:1.1rem}
 .tl .date{color:var(--muted);font-size:.85rem}
 .tl ul{margin:8px 0 0 18px;color:var(--muted);font-size:.93rem}
 .tl li{margin-bottom:4px}
-
-/* certs */
-.certs{display:flex;flex-wrap:wrap;gap:12px}
-.cert{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-weight:600;font-size:.92rem}
-.cert .ic{width:34px;height:34px;border-radius:9px;background:linear-gradient(120deg,var(--a1),var(--a2));display:grid;place-items:center;font-size:.9rem}
-
-/* contact */
 .contact{text-align:center}
 .contact h2{font-size:clamp(1.8rem,4vw,2.6rem)}
 .contact p{color:var(--muted);max-width:520px;margin:12px auto 26px}
-
 footer{padding:36px 0;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:.88rem}
-
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
 .reveal.on{opacity:1;transform:none}
-
-:root{--a1:#a06bff;--a2:#7b6bff;--a3:#31d6c7}
-
 .ccard{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:640px;margin:26px auto 0}
 .crow{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-weight:600;font-size:.95rem;color:var(--text);transition:transform .2s,border-color .2s}
 .crow:hover{transform:translateY(-3px);border-color:var(--a1)}
 .crow .cic{width:34px;height:34px;flex:0 0 34px;border-radius:9px;background:linear-gradient(120deg,var(--a1),var(--a2));display:grid;place-items:center;font-size:.9rem;font-weight:700;color:#fff}
 @media(max-width:560px){.ccard{grid-template-columns:1fr}}
-
-.avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:center 22%;border:3px solid rgba(255,255,255,.18);box-shadow:0 10px 34px rgba(91,140,255,.40);margin:0 auto 22px;display:block}
-</style></head><body>
+.avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:center 22%;border:3px solid rgba(255,255,255,.18);box-shadow:0 10px 34px rgba(249,115,22,.35);margin:0 auto 22px;display:block}
+</style>
+</head>
+<body>
 <div class="aurora"><span></span><span></span><span></span></div>
-<nav><div class="wrap"><div class="brand">SRB<span class="dot">.</span></div>
-<div class="navlinks"><a href="./index.html">Home</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="mailto:srivignabandela0507@gmail.com" class="btn btn-primary">Contact</a></div></div></nav>
+
+<nav><div class="wrap">
+  <div class="brand">VB<span class="dot">.</span></div>
+  <div class="navlinks">
+    <a href="./index.html">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="mailto:srivignabandela0507@gmail.com" class="btn btn-primary">Contact</a>
+  </div>
+</div></nav>
+
 <header><div class="wrap">
-<img src="./profile.jpg" alt="Srivigna Reddy Bandela" class="avatar">
-<div class="pill"><span class="live"></span> Open to Software Engineer roles</div>
-<h1>Srivigna Reddy <span class="grad">Bandela</span></h1>
-<div class="rolewrap"><span id="role" class="grad"></span></div>
-<p class="lead">I design and ship full-stack apps, REST APIs, and cloud-native microservices — clean, tested, scalable code across the whole lifecycle.</p>
-<div class="cta"><a href="#projects" class="btn btn-primary">View my work</a>
-<a href="https://github.com/Bandelasrivigna" target="_blank" class="btn btn-ghost">GitHub &#8599;</a>
-<a href="https://www.linkedin.com/in/srivigna-reddy-bandela-379b51229/" target="_blank" class="btn btn-ghost">LinkedIn &#8599;</a></div>
-<div class="stats reveal"><div class="stat"><div class="num grad" data-to="3" data-suffix="+">0</div><div class="lbl">Years experience</div></div><div class="stat"><div class="num grad" data-to="30" data-suffix="">0</div><div class="lbl">Backend tools built</div></div><div class="stat"><div class="num grad" data-to="90" data-suffix="%">0</div><div class="lbl">Test coverage</div></div><div class="stat"><div class="num grad" data-to="3" data-suffix="">0</div><div class="lbl">Certifications</div></div></div></div></header>
-<section class="about reveal"><div class="wrap"><div class="eyebrow">About</div><h2>Shipping software that scales</h2><p>Software Engineer with 3 years designing, building, and shipping full-stack and backend applications. Strong in Python, Java, TypeScript, and SQL, with hands-on REST APIs, microservices, and cloud-native services on AWS. Solid CS foundation in data structures, algorithms, system design, and testing — delivering clean, scalable code in Agile teams. Completing an MS in Computer Science (GPA 3.90).</p></div></section>
-<section id="projects" class="reveal"><div class="wrap"><div class="eyebrow">Selected Work</div><h2>Projects</h2><div class="projects"><div class="pcard"><div class="ptag">Full-Stack · AI</div><h3>IntelliQuery</h3><p>Full-stack app — React/TypeScript front end, Python/FastAPI backend on AWS — that turns natural language into validated SQL with LLMs and RAG, deployed with REST APIs, auth, and CI/CD.</p><div class="stackrow"><span>React</span><span>FastAPI</span><span>AWS</span><span>REST</span><span>LLM</span></div><a class="plink" href="https://github.com/Bandelasrivigna/IntelliQuery" target="_blank">View code &#8599;</a></div><div class="pcard"><div class="ptag">Backend · Systems</div><h3>MCP Server</h3><p>30-tool backend platform exposing REST-style interfaces and tool orchestration across a distributed microservice architecture — schema validation, observability, containerized deployment.</p><div class="stackrow"><span>Python</span><span>Microservices</span><span>REST</span><span>Docker</span><span>CI/CD</span></div><a class="plink" href="https://github.com/Bandelasrivigna" target="_blank">GitHub &#8599;</a></div><div class="pcard"><div class="ptag">Distributed Systems</div><h3>Real-Time Event Streaming</h3><p>High-throughput, low-latency service in Java + Kafka with fault-tolerant design, full test coverage, and monitoring for reliable production operation under load.</p><div class="stackrow"><span>Java</span><span>Kafka</span><span>PostgreSQL</span><span>Testing</span></div><a class="plink" href="https://github.com/Bandelasrivigna" target="_blank">GitHub &#8599;</a></div></div></div></section>
-<section id="skills" class="reveal"><div class="wrap"><div class="eyebrow">Toolbox</div><h2>Skills</h2><div class="skillgrid"><div class="skillcard"><h4><i>&#9670;</i>Languages</h4><div class="tags"><span>Python</span><span>Java</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>C/C++</span><span>Unix Shell</span></div></div><div class="skillcard"><h4><i>&#9670;</i>Backend & APIs</h4><div class="tags"><span>REST APIs</span><span>GraphQL</span><span>Microservices</span><span>FastAPI</span><span>Node.js</span><span>Kafka</span><span>Event-Driven</span></div></div><div class="skillcard"><h4><i>&#9670;</i>Frontend & Full-Stack</h4><div class="tags"><span>React</span><span>TypeScript</span><span>Redux</span><span>HTML/CSS</span><span>Responsive UI</span></div></div><div class="skillcard"><h4><i>&#9670;</i>Cloud, DevOps & CS</h4><div class="tags"><span>AWS</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span><span>Terraform</span><span>Data Structures</span><span>System Design</span></div></div></div></div></section>
-<section id="experience" class="reveal"><div class="wrap"><div class="eyebrow">Journey</div><h2>Experience</h2><div class="tl"><div class="item"><div class="top"><h3>Software Engineer — HCL Technologies</h3><span class="date">Aug 2022 – Jul 2024</span></div><ul><li>Shipped full-stack features end to end (React/TS, Python/Java, REST APIs) for enterprise apps.</li><li>Built scalable microservices & cloud-native services on AWS with OOP and design patterns.</li><li>Drove CI/CD (GitHub Actions), comprehensive tests, and code reviews to raise the quality bar.</li></ul></div><div class="item"><div class="top"><h3>Associate Software Engineer — ApheX (Startup)</h3><span class="date">Jul 2021 – Apr 2022</span></div><ul><li>Architected the startup's first backend services & REST APIs from scratch.</li><li>Set up CI/CD, automated testing, and Git workflows for rapid, reliable shipping.</li></ul></div><div class="item"><div class="top"><h3>M.S. Computer Science — Governors State University</h3><span class="date">Aug 2024 – May 2026</span></div><ul><li>GPA 3.90 · Data Structures & Algorithms, System Design, Distributed Systems.</li></ul></div></div></div></section>
-<section class="reveal"><div class="wrap"><div class="eyebrow">Credentials</div><h2>Certifications</h2><div class="certs"><div class="cert"><div class="ic">&#9729;</div>AWS Certified Data Engineer</div><div class="cert"><div class="ic">&#9729;</div>AWS Certified Machine Learning</div><div class="cert"><div class="ic">&#9729;</div>Google Professional Data Engineer</div></div></div></section>
-<section class="contact reveal"><div class="wrap"><div class="eyebrow">Let's talk</div><h2>Building something that needs to scale?</h2>
-<p>Open to new roles and always happy to talk shop. Let's connect.</p>
-<div class="ccard"><a class="crow" href="mailto:srivignabandela0507@gmail.com"><span class="cic">&#9993;</span>srivignabandela0507@gmail.com</a><a class="crow" href="tel:+13123711902"><span class="cic">&#9742;</span>+1 312-371-1902</a><a class="crow" href="https://www.linkedin.com/in/srivigna-reddy-bandela-379b51229/" target="_blank" rel="noopener noreferrer"><span class="cic">in</span>LinkedIn</a><a class="crow" href="https://github.com/Bandelasrivigna" target="_blank" rel="noopener noreferrer"><span class="cic">&#9670;</span>GitHub</a></div></div></section>
-<footer><div class="wrap">© 2026 Srivigna Reddy Bandela · <a href="./index.html" style="color:var(--a1)">Back to home</a></div></footer>
+  <img src="./profile.jpg" alt="Vigna B" class="avatar">
+  <div class="pill"><span class="live"></span> Open to Software Engineer roles</div>
+  <h1>Vigna <span class="grad">B</span></h1>
+  <div class="rolewrap"><span id="role" class="grad"></span></div>
+  <p class="lead">I write clean, well-tested Python code, build REST APIs that don't surprise the teams consuming them, and ship features that hold up in production.</p>
+  <div class="cta">
+    <a href="#projects" class="btn btn-primary">View my work</a>
+    <a href="mailto:srivignabandela0507@gmail.com" class="btn btn-ghost">Get in touch</a>
+  </div>
+  <div class="stats reveal">
+    <div class="stat"><div class="num grad" data-to="3" data-suffix="+">0</div><div class="lbl">Years experience</div></div>
+    <div class="stat"><div class="num grad" data-to="5" data-suffix="+">0</div><div class="lbl">Backend services built</div></div>
+    <div class="stat"><div class="num grad" data-to="3" data-suffix=".90">0</div><div class="lbl">M.S. GPA</div></div>
+    <div class="stat"><div class="num grad" data-to="2" data-suffix="">0</div><div class="lbl">Industries</div></div>
+  </div>
+</div></header>
+
+<section class="about reveal"><div class="wrap">
+  <div class="eyebrow">About</div>
+  <h2>Code that <span class="grad">ships and holds</span></h2>
+  <p>Software engineer with 3+ years of experience writing production Python, building REST APIs, and delivering reliable backend systems in both large enterprise and startup environments. I care about clean code, meaningful test coverage, and systems that are easy for teammates to understand and extend — not just systems that work on my machine. Currently a Graduate Software Engineer at Huntington National Bank, and completing an M.S. in Computer Science (GPA 3.90) at Governors State University.</p>
+</div></section>
+
+<section id="projects" class="reveal"><div class="wrap">
+  <div class="eyebrow">Selected Work</div>
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="pcard">
+      <div class="ptag">Backend · REST API</div>
+      <h3>APIForge</h3>
+      <p>A production-ready REST API platform built with FastAPI — full authentication, request validation, structured error responses, retry handling, rate limiting, and OpenAPI documentation. Designed so any consuming team can onboard without reading source code.</p>
+      <div class="stackrow"><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>pytest</span><span>Docker</span></div>
+    </div>
+    <div class="pcard">
+      <div class="ptag">Automation · Batch Processing</div>
+      <h3>AutomateFlow</h3>
+      <p>A workflow automation engine that replaces error-prone manual processes with scheduled Python batch jobs — configurable task definitions, retry logic, structured logging, and alerting on failures so nothing runs silently wrong.</p>
+      <div class="stackrow"><span>Python</span><span>Scheduler</span><span>PostgreSQL</span><span>Logging</span><span>CI/CD</span></div>
+    </div>
+    <div class="pcard">
+      <div class="ptag">Backend · Data Processing</div>
+      <h3>DataBridge</h3>
+      <p>A backend data processing service that ingests structured data from external sources, validates against configurable schemas, transforms, and writes to a PostgreSQL store — with full test coverage and schema migration support built in from day one.</p>
+      <div class="stackrow"><span>Python</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>pytest</span><span>pydantic</span></div>
+    </div>
+    <div class="pcard">
+      <div class="ptag">Database · Dev Tooling</div>
+      <h3>SchemaKit</h3>
+      <p>A database schema migration tool that tracks migration history, applies changes in order, supports rollback, and validates the target schema against expected state — designed to make schema changes on live databases predictable and auditable.</p>
+      <div class="stackrow"><span>Python</span><span>PostgreSQL</span><span>SQL</span><span>Alembic</span><span>pytest</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills" class="reveal"><div class="wrap">
+  <div class="eyebrow">Toolbox</div>
+  <h2>Skills</h2>
+  <div class="skillgrid">
+    <div class="skillcard"><h4><i>&#9670;</i>Languages &amp; Programming</h4><div class="tags"><span>Python</span><span>SQL</span><span>Object-oriented Design</span><span>Clean Code</span><span>Scripting &amp; Automation</span></div></div>
+    <div class="skillcard"><h4><i>&#9670;</i>Backend &amp; APIs</h4><div class="tags"><span>FastAPI</span><span>REST API Design</span><span>Microservices</span><span>Auth &amp; Middleware</span><span>Batch Job Design</span><span>System Design</span></div></div>
+    <div class="skillcard"><h4><i>&#9670;</i>Testing &amp; Quality</h4><div class="tags"><span>pytest</span><span>Unit Testing</span><span>Integration Testing</span><span>Code Review</span><span>Debugging</span><span>Logging &amp; Observability</span></div></div>
+    <div class="skillcard"><h4><i>&#9670;</i>Databases &amp; DevOps</h4><div class="tags"><span>PostgreSQL</span><span>SQLAlchemy</span><span>Schema Design</span><span>Git</span><span>CI/CD</span><span>Docker</span><span>AWS</span></div></div>
+  </div>
+</div></section>
+
+<section id="experience" class="reveal"><div class="wrap">
+  <div class="eyebrow">Journey</div>
+  <h2>Experience</h2>
+  <div class="tl">
+    <div class="item">
+      <div class="top"><h3>Graduate Software Engineer — Huntington National Bank</h3><span class="date">Aug 2025 – Present</span></div>
+      <ul>
+        <li>Write and maintain production Python code for backend ingestion and processing services, contributing to shared libraries and catching bugs in peer pull requests before they reach main.</li>
+        <li>Implement REST API integrations with internal and external systems, adding structured retry logic and logging that reduced debugging time noticeably during production incidents.</li>
+        <li>Write pytest unit and integration tests for all new features, maintaining meaningful coverage and catching edge cases in code review before they can reach deployment.</li>
+        <li>Author PostgreSQL schema migrations supporting feature releases, including data backfills and constraint changes on live tables executed without application downtime.</li>
+        <li>Debug recurring production failures by tracing logs and execution paths to root causes, replacing surface-level patches with durable solutions that have not re-surfaced.</li>
+        <li>Contribute to GitHub Actions CI/CD config including test gating and environment promotion, ensuring no change ships to production without passing a full suite of automated checks.</li>
+        <li>Consistently deliver committed sprint stories on time while managing concurrent workstreams, flagging scope or dependency risks early enough to avoid end-of-sprint surprises.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="top"><h3>Software Engineer — Value Cyber Tech Pvt Ltd, Hyderabad</h3><span class="date">Jun 2022 – Jul 2024</span></div>
+      <ul>
+        <li>Built multiple Python backend services from scratch in a startup environment, replacing fragile manual workflows and reducing weekly operational overhead for the team by several hours per cycle.</li>
+        <li>Designed and implemented REST APIs consumed by internal teams, with input validation, auth handling, and OpenAPI documentation that reduced onboarding time for new API consumers.</li>
+        <li>Wrote PostgreSQL schemas and SQLAlchemy data access layers supporting the core product, executing clean schema migrations as requirements evolved without data loss or downtime.</li>
+        <li>Automated recurring manual processes with Python batch jobs, eliminating a class of recurring data errors and freeing team capacity for higher-value engineering work.</li>
+        <li>Maintained test coverage and consistent Git practices across a 2-year tenure as the team scaled, keeping the codebase stable and navigable for engineers joining mid-stream.</li>
+        <li>Delivered major product features directly with founders, turning ambiguous requirements into shipped code within sprint timelines and iterating quickly on real user feedback.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="top"><h3>M.S. Computer Science — Governors State University, Chicago IL</h3><span class="date">Aug 2024 – May 2026</span></div>
+      <ul><li>GPA 3.90 &middot; Algorithms, Operating Systems, Distributed Systems, Software Engineering.</li></ul>
+    </div>
+    <div class="item">
+      <div class="top"><h3>B.E. Computer Science — MVSR Engineering College, Hyderabad</h3><span class="date"></span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="contact reveal"><div class="wrap">
+  <div class="eyebrow">Let's talk</div>
+  <h2>Building something that needs <span class="grad">solid engineering</span>?</h2>
+  <p>Open to Software Engineer roles. Happy to talk about system design, API architecture, or what good test coverage actually looks like in practice.</p>
+  <div class="ccard">
+    <a class="crow" href="mailto:srivignabandela0507@gmail.com"><span class="cic">&#9993;</span>srivignabandela0507@gmail.com</a>
+    <a class="crow" href="tel:+13123711902"><span class="cic">&#9742;</span>+1 312-371-1902</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Vigna B &middot; <a href="./index.html" style="color:var(--a1)">Back to home</a></div></footer>
+
 <script>
-const roles=["Software Engineer","Full-Stack Developer","Backend Engineer","Systems Builder"];let ri=0,ci=0,del=false;const el=document.getElementById('role');
+const roles=["Software Engineer","Backend Engineer","Python Developer","API Engineer"];
+let ri=0,ci=0,del=false;const el=document.getElementById('role');
 (function type(){const w=roles[ri];el.textContent=w.slice(0,ci);
-if(!del&&ci<w.length){ci++;setTimeout(type,90);}else if(!del&&ci===w.length){del=true;setTimeout(type,1400);}
-else if(del&&ci>0){ci--;setTimeout(type,45);}else{del=false;ri=(ri+1)%roles.length;setTimeout(type,300);}})();
+if(!del&&ci<w.length){ci++;setTimeout(type,90);}
+else if(!del&&ci===w.length){del=true;setTimeout(type,1400);}
+else if(del&&ci>0){ci--;setTimeout(type,45);}
+else{del=false;ri=(ri+1)%roles.length;setTimeout(type,300);}})();
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
-function countUp(n){const to=+n.dataset.to,s=n.dataset.suffix||"";let v=0,st=to/40;const t=setInterval(()=>{v+=st;if(v>=to){v=to;clearInterval(t);}n.textContent=Math.round(v)+s;},22);}
+function countUp(n){const to=+n.dataset.to,s=n.dataset.suffix||"";let v=0,st=to/40;
+const t=setInterval(()=>{v+=st;if(v>=to){v=to;clearInterval(t);}n.textContent=Math.round(v)+s;},22);}
 const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.num').forEach(countUp);so.unobserve(e.target);}}),{threshold:.4});
 document.querySelectorAll('.stats').forEach(x=>so.observe(x));
-</script></body></html>
+</script>
+</body>
+</html>

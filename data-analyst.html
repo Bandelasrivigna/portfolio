@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Srivigna Reddy Bandela — Analytics Engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Vigna B — Data Analyst</title>
+<meta name="description" content="Data Analyst — SQL, dashboards, and clear insights that drive business decisions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#080a0f; --bg2:#0d1017; --card:rgba(255,255,255,.04); --line:rgba(255,255,255,.08);
-  --text:#eef1f6; --muted:#9aa6b8; --a1:#5b8cff; --a2:#a06bff; --a3:#31d6c7;
+  --bg:#060c0a; --bg2:#091210; --card:rgba(255,255,255,.04); --line:rgba(255,255,255,.08);
+  --text:#eef1f6; --muted:#9aa6b8; --a1:#10b981; --a2:#0ea5e9; --a3:#a3e635;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -16,18 +20,14 @@ h1,h2,h3,.brand{font-family:'Sora',sans-serif}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
 .grad{background:linear-gradient(120deg,var(--a1),var(--a2) 45%,var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent}
-
-/* aurora background */
 .aurora{position:fixed;inset:0;z-index:-2;overflow:hidden}
-.aurora span{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;animation:float 18s ease-in-out infinite}
-.aurora span:nth-child(1){width:480px;height:480px;background:#3a5bff;top:-140px;left:-120px}
-.aurora span:nth-child(2){width:420px;height:420px;background:#8a3bff;bottom:-160px;right:-100px;animation-delay:-6s}
-.aurora span:nth-child(3){width:360px;height:360px;background:#17b3a6;top:40%;left:55%;animation-delay:-12s}
+.aurora span{position:absolute;border-radius:50%;filter:blur(90px);opacity:.4;animation:float 18s ease-in-out infinite}
+.aurora span:nth-child(1){width:500px;height:500px;background:#059669;top:-160px;left:-130px}
+.aurora span:nth-child(2){width:420px;height:420px;background:#0284c7;bottom:-160px;right:-100px;animation-delay:-6s}
+.aurora span:nth-child(3){width:360px;height:360px;background:#65a30d;top:40%;left:55%;animation-delay:-12s}
 @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-40px)}}
-body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% 0,rgba(91,140,255,.08),transparent 60%)}
-
-/* nav */
-nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(8,10,15,.6);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% 0,rgba(16,185,129,.07),transparent 60%)}
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(6,12,10,.6);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{font-weight:800;font-size:1.1rem;letter-spacing:.3px}
 .brand .dot{color:var(--a1)}
@@ -35,13 +35,11 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .navlinks a{color:var(--muted);font-size:.92rem;font-weight:500;transition:color .2s}
 .navlinks a:hover{color:var(--text)}
 .btn{display:inline-block;padding:10px 20px;border-radius:30px;font-weight:600;font-size:.9rem;transition:transform .2s,box-shadow .2s}
-.btn-primary{background:linear-gradient(120deg,var(--a1),var(--a2));color:#fff;box-shadow:0 8px 24px rgba(91,140,255,.35)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(91,140,255,.5)}
+.btn-primary{background:linear-gradient(120deg,var(--a1),var(--a2));color:#fff;box-shadow:0 8px 24px rgba(16,185,129,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(16,185,129,.45)}
 .btn-ghost{border:1px solid var(--line);color:var(--text)}
 .btn-ghost:hover{border-color:var(--a1);transform:translateY(-2px)}
 @media(max-width:720px){.navlinks a:not(.btn){display:none}}
-
-/* hero */
 header{padding:96px 0 60px;text-align:center}
 .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border:1px solid var(--line);border-radius:30px;background:var(--card);color:var(--muted);font-size:.82rem;margin-bottom:26px}
 .pill .live{width:8px;height:8px;border-radius:50%;background:var(--a3);box-shadow:0 0 10px var(--a3);animation:pulse 1.6s infinite}
@@ -51,35 +49,27 @@ header h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;line-height:1.05;le
 #role{border-right:2px solid var(--a2);padding-right:4px}
 header p.lead{max-width:620px;margin:22px auto 0;color:var(--muted);font-size:1.08rem}
 .cta{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-
-/* stats */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:56px 0 20px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 16px;text-align:center;backdrop-filter:blur(6px)}
 .stat .num{font-family:'Sora';font-size:2rem;font-weight:800}
 .stat .lbl{color:var(--muted);font-size:.84rem;margin-top:4px}
 @media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
-
 section{padding:64px 0;border-top:1px solid var(--line)}
 .eyebrow{color:var(--a1);font-weight:600;font-size:.85rem;letter-spacing:2px;text-transform:uppercase}
 section h2{font-size:2rem;font-weight:800;margin:8px 0 26px;letter-spacing:-.5px}
 .about p{color:var(--muted);font-size:1.06rem;max-width:760px}
-
-/* projects */
 .projects{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .pcard{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;overflow:hidden;transition:transform .25s,border-color .25s;backdrop-filter:blur(6px)}
 .pcard::after{content:"";position:absolute;inset:0;border-radius:18px;padding:1px;background:linear-gradient(120deg,var(--a1),var(--a2),var(--a3));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .25s}
-.pcard:hover{transform:translateY(-6px)}
-.pcard:hover::after{opacity:1}
+.pcard:hover{transform:translateY(-6px)}.pcard:hover::after{opacity:1}
 .pcard .ptag{color:var(--a3);font-size:.78rem;font-weight:600;letter-spacing:1px;text-transform:uppercase}
 .pcard h3{font-size:1.25rem;margin:6px 0 8px}
 .pcard p{color:var(--muted);font-size:.94rem}
 .stackrow{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 16px}
-.stackrow span{font-size:.76rem;background:rgba(91,140,255,.12);color:#bcd0ff;padding:4px 10px;border-radius:12px}
+.stackrow span{font-size:.76rem;background:rgba(16,185,129,.1);color:#6ee7b7;padding:4px 10px;border-radius:12px}
 .plink{color:var(--a1);font-weight:600;font-size:.88rem;display:inline-flex;align-items:center;gap:5px}
 .plink:hover{gap:9px;transition:gap .2s}
 @media(max-width:720px){.projects{grid-template-columns:1fr}}
-
-/* skills */
 .skillgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .skillcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
 .skillcard h4{font-family:'Sora';font-size:1rem;margin-bottom:12px;color:#fff}
@@ -88,73 +78,171 @@ section h2{font-size:2rem;font-weight:800;margin:8px 0 26px;letter-spacing:-.5px
 .tags span{font-size:.82rem;border:1px solid var(--line);padding:6px 12px;border-radius:14px;color:var(--text);transition:.2s}
 .tags span:hover{border-color:var(--a2);color:#fff;transform:translateY(-2px)}
 @media(max-width:720px){.skillgrid{grid-template-columns:1fr}}
-
-/* experience */
 .tl{position:relative;padding-left:26px}
 .tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--a1),var(--a2))}
 .tl .item{position:relative;margin-bottom:26px}
-.tl .item::before{content:"";position:absolute;left:-24px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--a1);box-shadow:0 0 0 4px rgba(91,140,255,.2)}
+.tl .item::before{content:"";position:absolute;left:-24px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--a1);box-shadow:0 0 0 4px rgba(16,185,129,.2)}
 .tl .top{display:flex;justify-content:space-between;flex-wrap:wrap}
 .tl h3{font-size:1.1rem}
 .tl .date{color:var(--muted);font-size:.85rem}
 .tl ul{margin:8px 0 0 18px;color:var(--muted);font-size:.93rem}
 .tl li{margin-bottom:4px}
-
-/* certs */
-.certs{display:flex;flex-wrap:wrap;gap:12px}
-.cert{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-weight:600;font-size:.92rem}
-.cert .ic{width:34px;height:34px;border-radius:9px;background:linear-gradient(120deg,var(--a1),var(--a2));display:grid;place-items:center;font-size:.9rem}
-
-/* contact */
 .contact{text-align:center}
 .contact h2{font-size:clamp(1.8rem,4vw,2.6rem)}
 .contact p{color:var(--muted);max-width:520px;margin:12px auto 26px}
-
 footer{padding:36px 0;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:.88rem}
-
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
 .reveal.on{opacity:1;transform:none}
-
-:root{--a1:#31d6c7;--a2:#3fb98a;--a3:#5b8cff}
-
 .ccard{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:640px;margin:26px auto 0}
 .crow{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-weight:600;font-size:.95rem;color:var(--text);transition:transform .2s,border-color .2s}
 .crow:hover{transform:translateY(-3px);border-color:var(--a1)}
 .crow .cic{width:34px;height:34px;flex:0 0 34px;border-radius:9px;background:linear-gradient(120deg,var(--a1),var(--a2));display:grid;place-items:center;font-size:.9rem;font-weight:700;color:#fff}
 @media(max-width:560px){.ccard{grid-template-columns:1fr}}
-
-.avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:center 22%;border:3px solid rgba(255,255,255,.18);box-shadow:0 10px 34px rgba(91,140,255,.40);margin:0 auto 22px;display:block}
-</style></head><body>
+.avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:center 22%;border:3px solid rgba(255,255,255,.18);box-shadow:0 10px 34px rgba(16,185,129,.35);margin:0 auto 22px;display:block}
+</style>
+</head>
+<body>
 <div class="aurora"><span></span><span></span><span></span></div>
-<nav><div class="wrap"><div class="brand">SRB<span class="dot">.</span></div>
-<div class="navlinks"><a href="./index.html">Home</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="mailto:srivignabandela0507@gmail.com" class="btn btn-primary">Contact</a></div></div></nav>
+
+<nav><div class="wrap">
+  <div class="brand">VB<span class="dot">.</span></div>
+  <div class="navlinks">
+    <a href="./index.html">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="mailto:srivignabandela0507@gmail.com" class="btn btn-primary">Contact</a>
+  </div>
+</div></nav>
+
 <header><div class="wrap">
-<img src="./profile.jpg" alt="Srivigna Reddy Bandela" class="avatar">
-<div class="pill"><span class="live"></span> Open to Analytics & Data Analyst roles</div>
-<h1>Srivigna Reddy <span class="grad">Bandela</span></h1>
-<div class="rolewrap"><span id="role" class="grad"></span></div>
-<p class="lead">I turn messy, conflicting data into one source of truth — governed metrics, clean dashboards, and answers people actually trust.</p>
-<div class="cta"><a href="#projects" class="btn btn-primary">View my work</a>
-<a href="https://github.com/Bandelasrivigna" target="_blank" class="btn btn-ghost">GitHub &#8599;</a>
-<a href="https://www.linkedin.com/in/srivigna-reddy-bandela-379b51229/" target="_blank" class="btn btn-ghost">LinkedIn &#8599;</a></div>
-<div class="stats reveal"><div class="stat"><div class="num grad" data-to="3" data-suffix="+">0</div><div class="lbl">Years experience</div></div><div class="stat"><div class="num grad" data-to="25" data-suffix="+">0</div><div class="lbl">Data-quality checks</div></div><div class="stat"><div class="num grad" data-to="60" data-suffix="%">0</div><div class="lbl">Fewer corrections</div></div><div class="stat"><div class="num grad" data-to="3" data-suffix="">0</div><div class="lbl">Certifications</div></div></div></div></header>
-<section class="about reveal"><div class="wrap"><div class="eyebrow">About</div><h2>Turning data into decisions people trust</h2><p>Analytics Engineer and Data Analyst with 3 years turning complex data into clear, trusted insights. Strong in advanced SQL, dbt, and BI (Tableau, Power BI), building dimensional and semantic models, governed metrics layers, and data-quality frameworks. I bridge the gap between raw data and confident business decisions. Completing an MS in Computer Science (GPA 3.90).</p></div></section>
-<section id="projects" class="reveal"><div class="wrap"><div class="eyebrow">Selected Work</div><h2>Projects</h2><div class="projects"><div class="pcard"><div class="ptag">AI · LLM · RAG</div><h3>IntelliQuery</h3><p>Natural-language-to-SQL assistant that lets non-technical users self-serve reliable answers — LLMs, RAG over a semantic layer, and guardrails that keep the SQL safe and grounded.</p><div class="stackrow"><span>LLM</span><span>RAG</span><span>SQL</span><span>Prompt Engineering</span></div><a class="plink" href="https://github.com/Bandelasrivigna/IntelliQuery" target="_blank">View code &#8599;</a></div><div class="pcard"><div class="ptag">Analytics Engineering</div><h3>MetricsHub</h3><p>Single-source-of-truth metrics layer with governed dbt models and BI dashboards, so analysts self-serve consistent KPIs without re-deriving business logic.</p><div class="stackrow"><span>dbt</span><span>SQL</span><span>Tableau</span><span>Power BI</span><span>Metrics Layer</span></div><a class="plink" href="https://github.com/Bandelasrivigna" target="_blank">GitHub &#8599;</a></div><div class="pcard"><div class="ptag">Experimentation</div><h3>GrowthLab</h3><p>A/B testing & product-analytics workbench: designs experiments, measures lift with statistical rigor, and turns results into clear recommendations.</p><div class="stackrow"><span>SQL</span><span>Python</span><span>A/B Testing</span><span>Statistics</span></div><a class="plink" href="https://github.com/Bandelasrivigna" target="_blank">GitHub &#8599;</a></div></div></div></section>
-<section id="skills" class="reveal"><div class="wrap"><div class="eyebrow">Toolbox</div><h2>Skills</h2><div class="skillgrid"><div class="skillcard"><h4><i>&#9670;</i>Analytics & SQL</h4><div class="tags"><span>Advanced SQL</span><span>CTEs</span><span>Window Functions</span><span>KPI Analysis</span><span>Statistical Analysis</span><span>A/B Testing</span></div></div><div class="skillcard"><h4><i>&#9670;</i>Visualization & BI</h4><div class="tags"><span>Tableau</span><span>Power BI</span><span>Google Data Studio</span><span>Advanced Excel</span><span>Data Storytelling</span></div></div><div class="skillcard"><h4><i>&#9670;</i>Analytics Engineering</h4><div class="tags"><span>Data Modeling</span><span>Semantic Models</span><span>dbt</span><span>Metrics Layer</span><span>Data Quality</span><span>Governance</span></div></div><div class="skillcard"><h4><i>&#9670;</i>Programming & Cloud</h4><div class="tags"><span>Python (Pandas, NumPy)</span><span>SQL</span><span>R</span><span>Snowflake</span><span>BigQuery</span><span>AWS / GCP</span></div></div></div></div></section>
-<section id="experience" class="reveal"><div class="wrap"><div class="eyebrow">Journey</div><h2>Experience</h2><div class="tl"><div class="item"><div class="top"><h3>Data Analyst / Analytics Engineer — HCL Technologies</h3><span class="date">Aug 2022 – Jul 2024</span></div><ul><li>Optimized complex SQL over millions of rows; cut report-refresh times 40%.</li><li>Built a data-quality framework with 25+ automated checks, cutting downstream corrections ~60%.</li><li>Designed dbt semantic models & BI dashboards translating 15+ sources into trusted KPIs.</li></ul></div><div class="item"><div class="top"><h3>Associate Software Engineer — ApheX (Startup)</h3><span class="date">Jul 2021 – Apr 2022</span></div><ul><li>Built data pipelines & SQL reporting from scratch, owning quality end to end.</li><li>Automated recurring reporting, freeing time for analysis.</li></ul></div><div class="item"><div class="top"><h3>M.S. Computer Science — Governors State University</h3><span class="date">Aug 2024 – May 2026</span></div><ul><li>GPA 3.90 · Data Analysis, Statistics, Database Systems.</li></ul></div></div></div></section>
-<section class="reveal"><div class="wrap"><div class="eyebrow">Credentials</div><h2>Certifications</h2><div class="certs"><div class="cert"><div class="ic">&#9729;</div>Google Professional Data Engineer</div><div class="cert"><div class="ic">&#9729;</div>dbt Analytics Engineer</div><div class="cert"><div class="ic">&#9729;</div>AWS Certified Data Engineer</div></div></div></section>
-<section class="contact reveal"><div class="wrap"><div class="eyebrow">Let's talk</div><h2>Need a single source of truth?</h2>
-<p>Open to new roles and always happy to talk shop. Let's connect.</p>
-<div class="ccard"><a class="crow" href="mailto:srivignabandela0507@gmail.com"><span class="cic">&#9993;</span>srivignabandela0507@gmail.com</a><a class="crow" href="tel:+13123711902"><span class="cic">&#9742;</span>+1 312-371-1902</a><a class="crow" href="https://www.linkedin.com/in/srivigna-reddy-bandela-379b51229/" target="_blank" rel="noopener noreferrer"><span class="cic">in</span>LinkedIn</a><a class="crow" href="https://github.com/Bandelasrivigna" target="_blank" rel="noopener noreferrer"><span class="cic">&#9670;</span>GitHub</a></div></div></section>
-<footer><div class="wrap">© 2026 Srivigna Reddy Bandela · <a href="./index.html" style="color:var(--a1)">Back to home</a></div></footer>
+  <img src="./profile.jpg" alt="Vigna B" class="avatar">
+  <div class="pill"><span class="live"></span> Open to Data Analyst roles</div>
+  <h1>Vigna <span class="grad">B</span></h1>
+  <div class="rolewrap"><span id="role" class="grad"></span></div>
+  <p class="lead">I turn messy, conflicting data into one source of truth — governed metrics, clear dashboards, and answers business teams can act on without asking twice.</p>
+  <div class="cta">
+    <a href="#projects" class="btn btn-primary">View my work</a>
+    <a href="mailto:srivignabandela0507@gmail.com" class="btn btn-ghost">Get in touch</a>
+  </div>
+  <div class="stats reveal">
+    <div class="stat"><div class="num grad" data-to="3" data-suffix="+">0</div><div class="lbl">Years experience</div></div>
+    <div class="stat"><div class="num grad" data-to="30" data-suffix="+">0</div><div class="lbl">Stakeholders served</div></div>
+    <div class="stat"><div class="num grad" data-to="3" data-suffix=".90">0</div><div class="lbl">M.S. GPA</div></div>
+    <div class="stat"><div class="num grad" data-to="2" data-suffix="">0</div><div class="lbl">Industries</div></div>
+  </div>
+</div></header>
+
+<section class="about reveal"><div class="wrap">
+  <div class="eyebrow">About</div>
+  <h2>Turning data into <span class="grad">decisions people trust</span></h2>
+  <p>Data analyst with 3+ years of experience using SQL, Python, and BI tools to explore data, surface insights, and support business decision-making. Strong in writing complex SQL across large relational databases, building Tableau and Power BI dashboards that give stakeholders self-serve access to KPIs, and owning the full analysis cycle from scoping through stakeholder delivery. Currently a Graduate Data Analyst at Huntington National Bank, and completing an M.S. in Computer Science (GPA 3.90) at Governors State University.</p>
+</div></section>
+
+<section id="projects" class="reveal"><div class="wrap">
+  <div class="eyebrow">Selected Work</div>
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="pcard">
+      <div class="ptag">Analytics Engineering · BI</div>
+      <h3>MetricsHub</h3>
+      <p>A single-source-of-truth metrics layer — governed dbt models paired with Tableau and Power BI dashboards that give analysts self-serve access to consistent, well-documented KPIs without re-deriving business logic or fighting over conflicting numbers.</p>
+      <div class="stackrow"><span>dbt</span><span>SQL</span><span>Tableau</span><span>Power BI</span><span>DAX</span><span>Metrics Layer</span></div>
+    </div>
+    <div class="pcard">
+      <div class="ptag">Cohort Analysis · Dashboard</div>
+      <h3>ChurnView</h3>
+      <p>Customer cohort and churn analysis dashboard that tracks user retention over time, segments customers by behavior, and surfaces the leading indicators of churn before they become lagging ones in the revenue numbers.</p>
+      <div class="stackrow"><span>Python</span><span>pandas</span><span>SQL</span><span>Tableau</span><span>Cohort Analysis</span></div>
+    </div>
+    <div class="pcard">
+      <div class="ptag">Experimentation · Statistics</div>
+      <h3>ABTestLab</h3>
+      <p>An A/B testing workbench that designs experiments, calculates required sample sizes, tracks experiment run time, and reports lift with confidence intervals and p-values — so results are statistically sound, not just directionally interesting.</p>
+      <div class="stackrow"><span>Python</span><span>SQL</span><span>Statistics</span><span>A/B Testing</span><span>Matplotlib</span></div>
+    </div>
+    <div class="pcard">
+      <div class="ptag">AI · Self-serve Analytics</div>
+      <h3>IntelliQuery</h3>
+      <p>Natural-language-to-SQL assistant that lets non-technical users self-serve reliable data answers — LLM generates safe read-only SQL over a RAG semantic layer, with guardrails that keep it grounded in the actual schema.</p>
+      <div class="stackrow"><span>LLM</span><span>RAG</span><span>SQL</span><span>Python</span><span>Prompt Engineering</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills" class="reveal"><div class="wrap">
+  <div class="eyebrow">Toolbox</div>
+  <h2>Skills</h2>
+  <div class="skillgrid">
+    <div class="skillcard"><h4><i>&#9670;</i>SQL &amp; Data Analysis</h4><div class="tags"><span>Advanced SQL</span><span>Window Functions</span><span>CTEs</span><span>Complex Joins</span><span>Query Optimization</span><span>Data Validation</span></div></div>
+    <div class="skillcard"><h4><i>&#9670;</i>Dashboards &amp; BI</h4><div class="tags"><span>Tableau</span><span>Power BI</span><span>DAX</span><span>LOD Expressions</span><span>KPI Dashboards</span><span>Self-serve Analytics</span><span>Data Storytelling</span></div></div>
+    <div class="skillcard"><h4><i>&#9670;</i>Python &amp; Statistics</h4><div class="tags"><span>pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>A/B Testing</span><span>Cohort Analysis</span><span>Statistical Inference</span></div></div>
+    <div class="skillcard"><h4><i>&#9670;</i>Data Prep &amp; Cloud</h4><div class="tags"><span>Data Wrangling</span><span>dbt</span><span>Snowflake</span><span>BigQuery</span><span>AWS</span><span>PostgreSQL</span><span>Git</span></div></div>
+  </div>
+</div></section>
+
+<section id="experience" class="reveal"><div class="wrap">
+  <div class="eyebrow">Journey</div>
+  <h2>Experience</h2>
+  <div class="tl">
+    <div class="item">
+      <div class="top"><h3>Graduate Data Analyst — Huntington National Bank</h3><span class="date">Aug 2025 – Present</span></div>
+      <ul>
+        <li>Write complex SQL across internal financial databases — window functions, multi-table joins, CTEs — powering recurring reporting and responding to ad-hoc requests from multiple stakeholder groups.</li>
+        <li>Build and maintain Power BI dashboards with DAX measures and automated daily refresh, giving 30+ business users self-serve access to KPIs and reducing routine analyst data-pull requests.</li>
+        <li>Partner with senior analysts to scope business questions and structure investigations, contributing findings to quarterly business reviews presented to department leadership.</li>
+        <li>Run cohort and trend analysis using Python and SQL, surfacing patterns in operational data that feed into monthly planning discussions and resourcing decisions.</li>
+        <li>Trace reporting discrepancies back through transformation logic to source data, coordinating fixes with data engineering before incorrect numbers reach stakeholders or leadership.</li>
+        <li>Maintain shared documentation of KPI definitions and metric logic, serving as the reference point during audits and new analyst onboarding.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="top"><h3>Data Analyst — Value Cyber Tech Pvt Ltd, Hyderabad</h3><span class="date">Jun 2022 – Jul 2024</span></div>
+      <ul>
+        <li>Wrote SQL and Python scripts replacing manual spreadsheet processes for recurring weekly and monthly reports, saving several hours of analyst time per reporting cycle.</li>
+        <li>Designed Tableau and Power BI dashboards with automated daily refresh tracking core KPIs across sales and operations, reviewed by leadership and business teams daily.</li>
+        <li>Ran A/B test and cohort analyses on product changes, delivering findings with confidence intervals that directly informed multiple product decisions across the role's tenure.</li>
+        <li>Defined and documented key business metrics across departments, resolving a conflict between finance and operations reporting that had produced different numbers for the same KPIs.</li>
+        <li>Cleaned and validated data from multiple source systems before analysis, eliminating recurring dashboard inaccuracies that had been flagged regularly by business stakeholders.</li>
+        <li>Delivered structured findings presentations to leadership and cross-functional teams, translating complex analysis into plain language that prompted follow-up decisions and actions.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="top"><h3>M.S. Computer Science — Governors State University, Chicago IL</h3><span class="date">Aug 2024 – May 2026</span></div>
+      <ul><li>GPA 3.90 &middot; Data Analysis, Statistics, Database Systems, Machine Learning.</li></ul>
+    </div>
+    <div class="item">
+      <div class="top"><h3>B.E. Computer Science — MVSR Engineering College, Hyderabad</h3><span class="date"></span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="contact reveal"><div class="wrap">
+  <div class="eyebrow">Let's talk</div>
+  <h2>Need a <span class="grad">single source of truth</span>?</h2>
+  <p>Open to Data Analyst and Analytics Engineering roles. Always happy to talk about dashboards, metrics, or how to stop two teams reporting different numbers for the same thing.</p>
+  <div class="ccard">
+    <a class="crow" href="mailto:srivignabandela0507@gmail.com"><span class="cic">&#9993;</span>srivignabandela0507@gmail.com</a>
+    <a class="crow" href="tel:+13123711902"><span class="cic">&#9742;</span>+1 312-371-1902</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Vigna B &middot; <a href="./index.html" style="color:var(--a1)">Back to home</a></div></footer>
+
 <script>
-const roles=["Data Analyst","Analytics Engineer","BI Developer","Insights Partner"];let ri=0,ci=0,del=false;const el=document.getElementById('role');
+const roles=["Data Analyst","Analytics Engineer","BI Developer","Insights Analyst"];
+let ri=0,ci=0,del=false;const el=document.getElementById('role');
 (function type(){const w=roles[ri];el.textContent=w.slice(0,ci);
-if(!del&&ci<w.length){ci++;setTimeout(type,90);}else if(!del&&ci===w.length){del=true;setTimeout(type,1400);}
-else if(del&&ci>0){ci--;setTimeout(type,45);}else{del=false;ri=(ri+1)%roles.length;setTimeout(type,300);}})();
+if(!del&&ci<w.length){ci++;setTimeout(type,90);}
+else if(!del&&ci===w.length){del=true;setTimeout(type,1400);}
+else if(del&&ci>0){ci--;setTimeout(type,45);}
+else{del=false;ri=(ri+1)%roles.length;setTimeout(type,300);}})();
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
-function countUp(n){const to=+n.dataset.to,s=n.dataset.suffix||"";let v=0,st=to/40;const t=setInterval(()=>{v+=st;if(v>=to){v=to;clearInterval(t);}n.textContent=Math.round(v)+s;},22);}
+function countUp(n){const to=+n.dataset.to,s=n.dataset.suffix||"";let v=0,st=to/40;
+const t=setInterval(()=>{v+=st;if(v>=to){v=to;clearInterval(t);}n.textContent=Math.round(v)+s;},22);}
 const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.num').forEach(countUp);so.unobserve(e.target);}}),{threshold:.4});
 document.querySelectorAll('.stats').forEach(x=>so.observe(x));
-</script></body></html>
+</script>
+</body>
+</html>
