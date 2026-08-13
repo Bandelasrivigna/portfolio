@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vigna B — Data Analyst</title>
-<meta name="description" content="Data Analyst — SQL, dashboards, and clear insights that drive business decisions.">
+<meta name="description" content="Data Analyst — SQL, Python, Tableau dashboards, and ETL pipelines that turn raw data into decisions.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#060c0a; --bg2:#091210; --card:rgba(255,255,255,.04); --line:rgba(255,255,255,.08);
-  --text:#eef1f6; --muted:#9aa6b8; --a1:#10b981; --a2:#0ea5e9; --a3:#a3e635;
+  --bg:#060c18; --bg2:#0b1222; --card:rgba(255,255,255,.04); --line:rgba(255,255,255,.08);
+  --text:#eef1f6; --muted:#9aa6b8; --a1:#3b82f6; --a2:#8b5cf6; --a3:#22d3ee;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -21,13 +21,13 @@ a{color:inherit;text-decoration:none}
 .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
 .grad{background:linear-gradient(120deg,var(--a1),var(--a2) 45%,var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent}
 .aurora{position:fixed;inset:0;z-index:-2;overflow:hidden}
-.aurora span{position:absolute;border-radius:50%;filter:blur(90px);opacity:.4;animation:float 18s ease-in-out infinite}
-.aurora span:nth-child(1){width:500px;height:500px;background:#059669;top:-160px;left:-130px}
-.aurora span:nth-child(2){width:420px;height:420px;background:#0284c7;bottom:-160px;right:-100px;animation-delay:-6s}
-.aurora span:nth-child(3){width:360px;height:360px;background:#65a30d;top:40%;left:55%;animation-delay:-12s}
+.aurora span{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;animation:float 18s ease-in-out infinite}
+.aurora span:nth-child(1){width:500px;height:500px;background:#1d4ed8;top:-160px;left:-130px}
+.aurora span:nth-child(2){width:420px;height:420px;background:#7c3aed;bottom:-160px;right:-100px;animation-delay:-6s}
+.aurora span:nth-child(3){width:360px;height:360px;background:#0891b2;top:40%;left:55%;animation-delay:-12s}
 @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-40px)}}
-body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% 0,rgba(16,185,129,.07),transparent 60%)}
-nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(6,12,10,.6);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% 0,rgba(59,130,246,.07),transparent 60%)}
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(6,12,24,.6);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{font-weight:800;font-size:1.1rem;letter-spacing:.3px}
 .brand .dot{color:var(--a1)}
@@ -35,8 +35,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .navlinks a{color:var(--muted);font-size:.92rem;font-weight:500;transition:color .2s}
 .navlinks a:hover{color:var(--text)}
 .btn{display:inline-block;padding:10px 20px;border-radius:30px;font-weight:600;font-size:.9rem;transition:transform .2s,box-shadow .2s}
-.btn-primary{background:linear-gradient(120deg,var(--a1),var(--a2));color:#fff;box-shadow:0 8px 24px rgba(16,185,129,.3)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(16,185,129,.45)}
+.btn-primary{background:linear-gradient(120deg,var(--a1),var(--a2));color:#fff;box-shadow:0 8px 24px rgba(59,130,246,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(59,130,246,.45)}
 .btn-ghost{border:1px solid var(--line);color:var(--text)}
 .btn-ghost:hover{border-color:var(--a1);transform:translateY(-2px)}
 @media(max-width:720px){.navlinks a:not(.btn){display:none}}
@@ -66,7 +66,7 @@ section h2{font-size:2rem;font-weight:800;margin:8px 0 26px;letter-spacing:-.5px
 .pcard h3{font-size:1.25rem;margin:6px 0 8px}
 .pcard p{color:var(--muted);font-size:.94rem}
 .stackrow{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 16px}
-.stackrow span{font-size:.76rem;background:rgba(16,185,129,.1);color:#6ee7b7;padding:4px 10px;border-radius:12px}
+.stackrow span{font-size:.76rem;background:rgba(59,130,246,.12);color:#bfdbfe;padding:4px 10px;border-radius:12px}
 .plink{color:var(--a1);font-weight:600;font-size:.88rem;display:inline-flex;align-items:center;gap:5px}
 .plink:hover{gap:9px;transition:gap .2s}
 @media(max-width:720px){.projects{grid-template-columns:1fr}}
@@ -81,7 +81,7 @@ section h2{font-size:2rem;font-weight:800;margin:8px 0 26px;letter-spacing:-.5px
 .tl{position:relative;padding-left:26px}
 .tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--a1),var(--a2))}
 .tl .item{position:relative;margin-bottom:26px}
-.tl .item::before{content:"";position:absolute;left:-24px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--a1);box-shadow:0 0 0 4px rgba(16,185,129,.2)}
+.tl .item::before{content:"";position:absolute;left:-24px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--a1);box-shadow:0 0 0 4px rgba(59,130,246,.2)}
 .tl .top{display:flex;justify-content:space-between;flex-wrap:wrap}
 .tl h3{font-size:1.1rem}
 .tl .date{color:var(--muted);font-size:.85rem}
@@ -98,7 +98,7 @@ footer{padding:36px 0;text-align:center;color:var(--muted);border-top:1px solid 
 .crow:hover{transform:translateY(-3px);border-color:var(--a1)}
 .crow .cic{width:34px;height:34px;flex:0 0 34px;border-radius:9px;background:linear-gradient(120deg,var(--a1),var(--a2));display:grid;place-items:center;font-size:.9rem;font-weight:700;color:#fff}
 @media(max-width:560px){.ccard{grid-template-columns:1fr}}
-.avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:center 22%;border:3px solid rgba(255,255,255,.18);box-shadow:0 10px 34px rgba(16,185,129,.35);margin:0 auto 22px;display:block}
+.avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:center 22%;border:3px solid rgba(255,255,255,.18);box-shadow:0 10px 34px rgba(59,130,246,.35);margin:0 auto 22px;display:block}
 </style>
 </head>
 <body>
@@ -120,23 +120,23 @@ footer{padding:36px 0;text-align:center;color:var(--muted);border-top:1px solid 
   <div class="pill"><span class="live"></span> Open to Data Analyst roles</div>
   <h1>Vigna <span class="grad">B</span></h1>
   <div class="rolewrap"><span id="role" class="grad"></span></div>
-  <p class="lead">I turn messy, conflicting data into one source of truth — governed metrics, clear dashboards, and answers business teams can act on without asking twice.</p>
+  <p class="lead">I write advanced SQL and Python, build automated Tableau dashboards, and design ETL pipelines that extract, transform, and load data across multiple databases — turning raw data into business intelligence that cross-functional teams can actually use.</p>
   <div class="cta">
     <a href="#projects" class="btn btn-primary">View my work</a>
     <a href="mailto:srivignabandela0507@gmail.com" class="btn btn-ghost">Get in touch</a>
   </div>
   <div class="stats reveal">
     <div class="stat"><div class="num grad" data-to="3" data-suffix="+">0</div><div class="lbl">Years experience</div></div>
-    <div class="stat"><div class="num grad" data-to="30" data-suffix="+">0</div><div class="lbl">Stakeholders served</div></div>
+    <div class="stat"><div class="num grad" data-to="6" data-suffix="+">0</div><div class="lbl">Data pipelines built</div></div>
+    <div class="stat"><div class="num grad" data-to="30" data-suffix="+">0</div><div class="lbl">Dashboard stakeholders</div></div>
     <div class="stat"><div class="num grad" data-to="3" data-suffix=".90">0</div><div class="lbl">M.S. GPA</div></div>
-    <div class="stat"><div class="num grad" data-to="2" data-suffix="">0</div><div class="lbl">Industries</div></div>
   </div>
 </div></header>
 
 <section class="about reveal"><div class="wrap">
   <div class="eyebrow">About</div>
-  <h2>Turning data into <span class="grad">decisions people trust</span></h2>
-  <p>Data analyst with 3+ years of experience using SQL, Python, and BI tools to explore data, surface insights, and support business decision-making. Strong in writing complex SQL across large relational databases, building Tableau and Power BI dashboards that give stakeholders self-serve access to KPIs, and owning the full analysis cycle from scoping through stakeholder delivery. Currently a Graduate Data Analyst at Huntington National Bank, and completing an M.S. in Computer Science (GPA 3.90) at Governors State University.</p>
+  <h2>Data that <span class="grad">answers questions</span></h2>
+  <p>Data analyst with 3+ years designing ETL pipelines, data models, and automated Tableau dashboards that transform raw data into insights and recommendations for business decisions. I write advanced SQL — window functions, CTEs, views, tables, indexes, data schema design — and use Python to automate data load processes, manipulate data for analysis and prediction, and optimize reporting workflows across multiple databases. I have hands-on experience conducting root cause analyses on historical data to identify trends and patterns, building self-service KPI dashboards, and communicating findings to cross-functional teams across sales, product, engineering, and operations. Currently a Graduate Data Analyst at Huntington National Bank. M.S. Computer Science, GPA 3.90, Governors State University (May 2026).</p>
 </div></section>
 
 <section id="projects" class="reveal"><div class="wrap">
@@ -144,28 +144,28 @@ footer{padding:36px 0;text-align:center;color:var(--muted);border-top:1px solid 
   <h2>Projects</h2>
   <div class="projects">
     <div class="pcard">
-      <div class="ptag">Analytics Engineering · BI</div>
+      <div class="ptag">ETL · Data Pipelines</div>
+      <h3>DataFlow</h3>
+      <p>A modular ETL pipeline framework that extracts data from multiple databases, applies configurable transformation rules and data schema validation, and loads clean, structured datasets into a central analytics layer — with logging, alerting, and retry handling so failures surface before stakeholders notice.</p>
+      <div class="stackrow"><span>Python</span><span>SQL</span><span>ETL</span><span>PostgreSQL</span><span>Airflow</span><span>dbt</span><span>AWS S3</span></div>
+    </div>
+    <div class="pcard">
+      <div class="ptag">Tableau · Business Intelligence</div>
       <h3>MetricsHub</h3>
-      <p>A single-source-of-truth metrics layer — governed dbt models paired with Tableau and Power BI dashboards that give analysts self-serve access to consistent, well-documented KPIs without re-deriving business logic or fighting over conflicting numbers.</p>
-      <div class="stackrow"><span>dbt</span><span>SQL</span><span>Tableau</span><span>Power BI</span><span>DAX</span><span>Metrics Layer</span></div>
+      <p>An automated Tableau dashboard suite tracking real-time product performance KPIs, revenue metrics, and operational health across business units. Built with self-service filters and drill-downs so sales, operations, and product teams can answer their own data questions without submitting analytics requests.</p>
+      <div class="stackrow"><span>Tableau</span><span>SQL</span><span>Python</span><span>KPI Design</span><span>Snowflake</span><span>Excel</span></div>
     </div>
     <div class="pcard">
-      <div class="ptag">Cohort Analysis · Dashboard</div>
-      <h3>ChurnView</h3>
-      <p>Customer cohort and churn analysis dashboard that tracks user retention over time, segments customers by behavior, and surfaces the leading indicators of churn before they become lagging ones in the revenue numbers.</p>
-      <div class="stackrow"><span>Python</span><span>pandas</span><span>SQL</span><span>Tableau</span><span>Cohort Analysis</span></div>
+      <div class="ptag">SQL · Analytics</div>
+      <h3>QueryForge</h3>
+      <p>A SQL-based analytics framework for advanced data extraction — complex joins, window functions, CTEs, materialized views, and indexes tuned for large-scale datasets. Designed to make ad-hoc analysis fast and root cause investigation reproducible, with query templates that the whole analytics team can reuse.</p>
+      <div class="stackrow"><span>SQL</span><span>PostgreSQL</span><span>Snowflake</span><span>Data Schema</span><span>Views &amp; Indexes</span><span>Query Optimization</span></div>
     </div>
     <div class="pcard">
-      <div class="ptag">Experimentation · Statistics</div>
-      <h3>ABTestLab</h3>
-      <p>An A/B testing workbench that designs experiments, calculates required sample sizes, tracks experiment run time, and reports lift with confidence intervals and p-values — so results are statistically sound, not just directionally interesting.</p>
-      <div class="stackrow"><span>Python</span><span>SQL</span><span>Statistics</span><span>A/B Testing</span><span>Matplotlib</span></div>
-    </div>
-    <div class="pcard">
-      <div class="ptag">AI · Self-serve Analytics</div>
-      <h3>IntelliQuery</h3>
-      <p>Natural-language-to-SQL assistant that lets non-technical users self-serve reliable data answers — LLM generates safe read-only SQL over a RAG semantic layer, with guardrails that keep it grounded in the actual schema.</p>
-      <div class="stackrow"><span>LLM</span><span>RAG</span><span>SQL</span><span>Python</span><span>Prompt Engineering</span></div>
+      <div class="ptag">Python · Reporting Automation</div>
+      <h3>AutoReport</h3>
+      <p>A Python-driven reporting automation platform that replaces manual Excel-based reporting cycles with scheduled, validated data pipelines. Automates data load processes across databases, generates consistent business performance reports, and delivers formatted outputs to stakeholders — on schedule, without analyst intervention.</p>
+      <div class="stackrow"><span>Python</span><span>pandas</span><span>NumPy</span><span>Excel</span><span>Automation</span><span>Metrics Validation</span></div>
     </div>
   </div>
 </div></section>
@@ -174,10 +174,10 @@ footer{padding:36px 0;text-align:center;color:var(--muted);border-top:1px solid 
   <div class="eyebrow">Toolbox</div>
   <h2>Skills</h2>
   <div class="skillgrid">
-    <div class="skillcard"><h4><i>&#9670;</i>SQL &amp; Data Analysis</h4><div class="tags"><span>Advanced SQL</span><span>Window Functions</span><span>CTEs</span><span>Complex Joins</span><span>Query Optimization</span><span>Data Validation</span></div></div>
-    <div class="skillcard"><h4><i>&#9670;</i>Dashboards &amp; BI</h4><div class="tags"><span>Tableau</span><span>Power BI</span><span>DAX</span><span>LOD Expressions</span><span>KPI Dashboards</span><span>Self-serve Analytics</span><span>Data Storytelling</span></div></div>
-    <div class="skillcard"><h4><i>&#9670;</i>Python &amp; Statistics</h4><div class="tags"><span>pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>A/B Testing</span><span>Cohort Analysis</span><span>Statistical Inference</span></div></div>
-    <div class="skillcard"><h4><i>&#9670;</i>Data Prep &amp; Cloud</h4><div class="tags"><span>Data Wrangling</span><span>dbt</span><span>Snowflake</span><span>BigQuery</span><span>AWS</span><span>PostgreSQL</span><span>Git</span></div></div>
+    <div class="skillcard"><h4><i>&#9670;</i>SQL &amp; Data Extraction</h4><div class="tags"><span>Advanced SQL Queries</span><span>CTEs</span><span>Window Functions</span><span>Views &amp; Indexes</span><span>Data Schema Design</span><span>Ad-hoc Analysis</span><span>PostgreSQL</span><span>Snowflake</span></div></div>
+    <div class="skillcard"><h4><i>&#9670;</i>Python &amp; Automation</h4><div class="tags"><span>Python</span><span>pandas</span><span>NumPy</span><span>Data Manipulation</span><span>Automate Data Load</span><span>Optimize Reporting</span><span>ETL Scripting</span><span>scikit-learn</span></div></div>
+    <div class="skillcard"><h4><i>&#9670;</i>Dashboards &amp; Visualization</h4><div class="tags"><span>Tableau</span><span>Automated Dashboards</span><span>KPI Tracking</span><span>Self-service Tools</span><span>Real-time Reporting</span><span>Data Visualization</span><span>Excel</span></div></div>
+    <div class="skillcard"><h4><i>&#9670;</i>ETL &amp; Data Pipelines</h4><div class="tags"><span>ETL Pipelines</span><span>dbt</span><span>Apache Airflow</span><span>AWS (S3 · Glue)</span><span>Data Ingestion</span><span>Root Cause Analysis</span><span>Historical Data Analysis</span><span>Cross-functional Collaboration</span></div></div>
   </div>
 </div></section>
 
@@ -186,30 +186,29 @@ footer{padding:36px 0;text-align:center;color:var(--muted);border-top:1px solid 
   <h2>Experience</h2>
   <div class="tl">
     <div class="item">
-      <div class="top"><h3>Graduate Data Analyst — Huntington National Bank</h3><span class="date">Aug 2025 – Present</span></div>
+      <div class="top"><h3>Graduate Data Analyst — Huntington National Bank, Chicago IL</h3><span class="date">Aug 2025 – Present</span></div>
       <ul>
-        <li>Write complex SQL across internal financial databases — window functions, multi-table joins, CTEs — powering recurring reporting and responding to ad-hoc requests from multiple stakeholder groups.</li>
-        <li>Build and maintain Power BI dashboards with DAX measures and automated daily refresh, giving 30+ business users self-serve access to KPIs and reducing routine analyst data-pull requests.</li>
-        <li>Partner with senior analysts to scope business questions and structure investigations, contributing findings to quarterly business reviews presented to department leadership.</li>
-        <li>Run cohort and trend analysis using Python and SQL, surfacing patterns in operational data that feed into monthly planning discussions and resourcing decisions.</li>
-        <li>Trace reporting discrepancies back through transformation logic to source data, coordinating fixes with data engineering before incorrect numbers reach stakeholders or leadership.</li>
-        <li>Maintain shared documentation of KPI definitions and metric logic, serving as the reference point during audits and new analyst onboarding.</li>
+        <li>Design and maintain ETL pipelines that extract, clean, transform, and load data across 6+ databases, building SQL views, tables, and indexes that convert raw financial data into analytics-ready datasets for downstream reporting and business intelligence.</li>
+        <li>Create automated Tableau dashboards tracking real-time product performance KPIs and business metrics, providing self-service tools to 30+ stakeholders across sales, operations, and product teams that reduce manual reporting cycles.</li>
+        <li>Conduct root cause analyses and ad-hoc investigations on historical data to identify trends and patterns in financial performance, communicating findings to cross-functional partners across product, engineering, and risk to drive resolution.</li>
+        <li>Use Python to automate data load processes, manipulate data for analysis and prediction, and optimize reporting workflows, cutting recurring data preparation time and improving pipeline reliability.</li>
+        <li>Develop and validate metrics to evaluate business performance, building Excel-based and Python-driven reports that deliver accurate, consistent business intelligence to senior leadership each cycle.</li>
+        <li>Design data models and dbt transformation layers that convert raw transactional data into structured datasets, surfacing insights and recommendations that shape credit risk strategy and product decisions.</li>
       </ul>
     </div>
     <div class="item">
       <div class="top"><h3>Data Analyst — Value Cyber Tech Pvt Ltd, Hyderabad</h3><span class="date">Jun 2022 – Jul 2024</span></div>
       <ul>
-        <li>Wrote SQL and Python scripts replacing manual spreadsheet processes for recurring weekly and monthly reports, saving several hours of analyst time per reporting cycle.</li>
-        <li>Designed Tableau and Power BI dashboards with automated daily refresh tracking core KPIs across sales and operations, reviewed by leadership and business teams daily.</li>
-        <li>Ran A/B test and cohort analyses on product changes, delivering findings with confidence intervals that directly informed multiple product decisions across the role's tenure.</li>
-        <li>Defined and documented key business metrics across departments, resolving a conflict between finance and operations reporting that had produced different numbers for the same KPIs.</li>
-        <li>Cleaned and validated data from multiple source systems before analysis, eliminating recurring dashboard inaccuracies that had been flagged regularly by business stakeholders.</li>
-        <li>Delivered structured findings presentations to leadership and cross-functional teams, translating complex analysis into plain language that prompted follow-up decisions and actions.</li>
+        <li>Designed and implemented data schema, SQL views, tables, and indexes across multiple databases to support ETL pipelines integrating 5 siloed data sources, creating a unified analytics layer for reporting and business performance tracking.</li>
+        <li>Built automated Tableau dashboards tracking real-time product performance KPIs across sales and operations, replacing manual Excel processes and delivering self-service data visualization tools to business stakeholders.</li>
+        <li>Wrote advanced SQL queries and Python scripts to extract, transform, and load data across multiple databases, automating data load processes and optimizing reporting pipelines to reduce manual analyst effort.</li>
+        <li>Conducted root cause analyses and ad-hoc analyses of historical datasets to identify trends, patterns, and anomalies, translating findings into clear insights and recommendations for cross-functional teams in sales, product, and operations.</li>
+        <li>Developed and validated business performance metrics using Python and SQL, producing Excel reports and automated dashboards that provided consistent, actionable business intelligence to leadership.</li>
       </ul>
     </div>
     <div class="item">
       <div class="top"><h3>M.S. Computer Science — Governors State University, Chicago IL</h3><span class="date">Aug 2024 – May 2026</span></div>
-      <ul><li>GPA 3.90 &middot; Data Analysis, Statistics, Database Systems, Machine Learning.</li></ul>
+      <ul><li>GPA 3.90 &middot; Machine Learning, Statistics, Distributed Systems, Applied Data Science.</li></ul>
     </div>
     <div class="item">
       <div class="top"><h3>B.E. Computer Science — MVSR Engineering College, Hyderabad</h3><span class="date"></span></div>
@@ -219,8 +218,8 @@ footer{padding:36px 0;text-align:center;color:var(--muted);border-top:1px solid 
 
 <section class="contact reveal"><div class="wrap">
   <div class="eyebrow">Let's talk</div>
-  <h2>Need a <span class="grad">single source of truth</span>?</h2>
-  <p>Open to Data Analyst and Analytics Engineering roles. Always happy to talk about dashboards, metrics, or how to stop two teams reporting different numbers for the same thing.</p>
+  <h2>Need someone who turns <span class="grad">data into decisions</span>?</h2>
+  <p>Open to Data Analyst and Data Solutions roles. Happy to talk about SQL schema design, Tableau dashboard architecture, ETL pipeline patterns, Python reporting automation, or how to make cross-functional analytics actually work.</p>
   <div class="ccard">
     <a class="crow" href="mailto:srivignabandela0507@gmail.com"><span class="cic">&#9993;</span>srivignabandela0507@gmail.com</a>
     <a class="crow" href="tel:+13123711902"><span class="cic">&#9742;</span>+1 312-371-1902</a>
@@ -230,7 +229,7 @@ footer{padding:36px 0;text-align:center;color:var(--muted);border-top:1px solid 
 <footer><div class="wrap">© 2026 Vigna B &middot; <a href="./index.html" style="color:var(--a1)">Back to home</a></div></footer>
 
 <script>
-const roles=["Data Analyst","Analytics Engineer","BI Developer","Insights Analyst"];
+const roles=["Data Analyst","Data Solutions Analyst","SQL · Python · Tableau","ETL Pipeline Engineer"];
 let ri=0,ci=0,del=false;const el=document.getElementById('role');
 (function type(){const w=roles[ri];el.textContent=w.slice(0,ci);
 if(!del&&ci<w.length){ci++;setTimeout(type,90);}
